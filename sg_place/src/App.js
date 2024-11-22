@@ -1,8 +1,19 @@
 import './App.css';
+import Sgweb from './componentes/Header/header';
+import Login from './componentes/Login/login';
+import Fotter from './componentes/Fotter/fotter';
 
 function App() {
   return (
-    <h1 className='h1'>Hello word</h1>
+    <header>
+    <Sgweb/>
+    
+    <main>
+    <Login/>
+    </main>
+
+    <Fotter/>
+    </header>
   )
 }
 
