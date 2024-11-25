@@ -1,9 +1,6 @@
 import './login.css'
 function Login (){
 
-  function Muda(){
-    alert('vai se fuder ferreira costa!')
-  }
     return (
         <div className="login-container">
           <div className="login-box">
@@ -27,7 +24,7 @@ function Login (){
                   required
                 />
               </div>
-              <button onclick={Muda()} type="submit" className="btn btn-login btn-lg">
+              <button type="submit" className="btn btn-login btn-lg">
                 Entrar
               </button>
             </form>
