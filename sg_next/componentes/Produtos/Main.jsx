@@ -6,6 +6,7 @@ export default function Index() {
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
+                        <h2 className="text-2xl font-semibold mb-6">Gestão de Produtos</h2>
       {/* Tabs */}
       <div>
         <ul className="flex border-b mb-4">
