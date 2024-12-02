@@ -1,10 +1,13 @@
-import Image from "next/image";
-import Sidebar from '../componentes/Login/Login'
+import Header from "../componentes/Produtos/Header.jsx";
+import Main from "../componentes/Produtos/Main.jsx";
+
 
 export default function Home() {
   return (
     <>
-      <Sidebar/>
+      <Header/>
+      <Main/>
     </>
   );
 }
+
