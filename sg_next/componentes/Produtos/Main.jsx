@@ -5,6 +5,9 @@ export default function Index() {
   const [activeTab, setActiveTab] = useState("consulta");
 
   return (
+    <>
+    <div className="ml-64 p-6">
+
     <div className="p-6 bg-gray-100 min-h-screen">
                         <h2 className="text-2xl font-semibold mb-6">Gestão de Produtos</h2>
       {/* Tabs */}
@@ -201,5 +204,7 @@ export default function Index() {
         )}
       </div>
     </div>
+    </div>
+    </>
   );
 }
