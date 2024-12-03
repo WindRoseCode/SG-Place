@@ -1,12 +1,11 @@
-import Header from ".././componentes/Index/Header";
-import Main from ".././componentes/Index/Main";
+import Header from ".././componentes/Modulos/Modulos";
 
 
 export default function Home() {
   return (
     <>
       <Header/>
-      <Main/>
+      
     </>
   );
 }

@@ -27,7 +27,7 @@ export default function SideBar() {
 
                     <Link 
                         className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-blue-600 hover:scale-105"
-                        href={"/vendas"}>
+                        href={"/pedidos"}>
                         Gestão de Vendas
                     </Link>
 

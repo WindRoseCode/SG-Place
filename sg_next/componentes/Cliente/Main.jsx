@@ -1,12 +1,10 @@
 "use client";
 import { useState } from "react";
 
-
 const ClientesTabs = () => {
   const [activeTab, setActiveTab] = useState("cadastro");
 
   return (
-    
     <div className="container mx-auto ml-64 p-6">
       <h2 className="text-center text-2xl font-bold mb-6">Cadastro de Clientes</h2>
 
@@ -33,7 +31,9 @@ const ClientesTabs = () => {
           >
             Consulta
           </button>
-          <button
+
+          {/* Futura Função de crediario */}
+          {/* <button
             className={`py-2 px-4 ${
               activeTab === "crediario"
                 ? "border-b-2 border-blue-500 text-blue-500"
@@ -42,7 +42,7 @@ const ClientesTabs = () => {
             onClick={() => setActiveTab("crediario")}
           >
             Crediário/Cobrança
-          </button>
+          </button> */}
         </nav>
       </div>
 
@@ -59,14 +59,35 @@ const ClientesTabs = () => {
 // Componente de Cadastro
 const Cadastro = () => {
   const [tipoPessoa, setTipoPessoa] = useState("fisica");
+  const [formData, setFormData] = useState({
+    logradouro: '',
+    numero: '',
+    bairro: '',
+    complemento: '',
+    cidade: '',
+    estado: '',
+  });
 
   const togglePessoa = (tipo) => setTipoPessoa(tipo);
 
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <form className="space-y-4">
+    <form className="space-y-4" onSubmit={handleSubmit}>
       {/* Tipo de Pessoa */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="text-lg font-bold mb-4">
           Tipo de Pessoa:
         </label>
         <div className="flex space-x-4">
@@ -151,10 +172,95 @@ const Cadastro = () => {
         </div>
       )}
 
+      {/* Campos de Endereço */}
+      <div>
+        <h3 className="text-lg font-bold mb-4">Endereço</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="flex flex-col space-y-2">
+            <label className="text-sm font-medium text-gray-700">CEP:</label>
+            <input
+              type="text"
+              placeholder="00000-00"
+              className="border border-gray-300 rounded-lg px-4 py-2"
+            />
+          </div>
+          <div>
+            <label htmlFor="logradouro" className="block text-sm font-medium text-gray-700">Logradouro:</label>
+            <input
+              type="text"
+              id="logradouro"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              placeholder="Rua, Av, etc."
+              value={formData.logradouro}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="numero" className="block text-sm font-medium text-gray-700">Número:</label>
+            <input
+              type="text"
+              id="numero"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={formData.numero}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="bairro" className="block text-sm font-medium text-gray-700">Bairro:</label>
+            <input
+              type="text"
+              id="bairro"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={formData.bairro}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+          <div>
+            <label htmlFor="complemento" className="block text-sm font-medium text-gray-700">Complemento:</label>
+            <input
+              type="text"
+              id="complemento"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              placeholder="Apto, Bloco, Casa, etc."
+              value={formData.complemento}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="cidade" className="block text-sm font-medium text-gray-700">Cidade:</label>
+            <input
+              type="text"
+              id="cidade"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={formData.cidade}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="estado" className="block text-sm font-medium text-gray-700">Estado:</label>
+            <input
+              type="text"
+              id="estado"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={formData.estado}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Botão para Salvar */}
       <button
         type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+        className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
       >
         Salvar
       </button>
@@ -187,4 +293,5 @@ const Crediario = () => (
     <p>Gerencie cobranças e crediários aqui.</p>
   </div>
 );
+
 export default ClientesTabs;
