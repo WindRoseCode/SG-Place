@@ -6,7 +6,7 @@ export default function SideBar() {
 
                 <a
                     href="index.html"
-                    class="text-lg font-semibold text-white mb-6"
+                    className="text-lg font-semibold text-white mb-6"
                 >
                     Gestão de Sistema
                 </a>
