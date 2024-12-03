@@ -1,36 +1,36 @@
+import Link from "next/link"
+
 export default function SideBar() {
     return (
         <aside>
 
             <div className="fixed top-0 left-0 h-full w-64 bg-gray-800 flex flex-col items-center pt-6">
-
-                <a
-                    href="index.html"
-                    className="text-lg font-semibold text-white mb-6"
-                >
+                <Link 
+                    className="text-lg font-semibold text-white mb-6" 
+                    href={"/"}>
                     Gestão de Sistema
-                </a>
+                </Link>
 
                 {/* Menu Items  */}
                 <nav className="flex-1 w-full">
-                    <a
-                        href="clientes.html"
-                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105"
-                    >
+                    <Link 
+                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105" 
+                        href={"/clientes"}>
                         Gestão de Clientes
-                    </a>
-                    <a
-                        href="produtos.html"
-                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105"
-                    >
+                    </Link>
+                    
+                    <Link
+                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105" 
+                        href={"/produtos"}>
                         Consulta Produtos
-                    </a>
-                    <a
-                        href="gestao-vendas.html"
+                    </Link>
+
+                    <Link 
                         className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-blue-600 hover:scale-105"
-                    >
+                        href={"/vendas"}>
                         Gestão de Vendas
-                    </a>
+                    </Link>
+
                     {/* <a
                         href="financeiro.html"
                         className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105"

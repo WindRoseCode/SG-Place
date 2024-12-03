@@ -1,12 +1,12 @@
-import Sidebar from "../componentes/Sidebar/Sidebar.jsx";
-import ClientesTabs from "../componentes/Cliente/Main.jsx";
+import Header from ".././componentes/Index/Header";
+import Main from ".././componentes/Index/Main";
 
 
 export default function Home() {
   return (
     <>
-      <Sidebar/>
-      <ClientesTabs/>
+      <Header/>
+      <Main/>
     </>
   );
 }
