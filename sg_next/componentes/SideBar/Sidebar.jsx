@@ -13,48 +13,52 @@ export default function SideBar() {
 
                 {/* Menu Items  */}
                 <nav className="flex-1 w-full">
-                    <Link 
-                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105" 
-                        href={"/clientes"}>
-                        Gestão de Clientes
-                    </Link>
-                    
-                    <Link
-                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105" 
-                        href={"/produtos"}>
-                        Consulta Produtos
-                    </Link>
+
 
                     <Link 
                         className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-blue-600 hover:scale-105"
                         href={"/pedidos"}>
                         Gestão de Vendas
                     </Link>
+                    
+                    <Link
+                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105" 
+                        href={"/produtos"}>
+                        Gestão Produtos
+                    </Link>
+                    
+                    <Link 
+                        className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105" 
+                        href={"/clientes"}>
+                        Gestão de Clientes
+                    </Link>
 
-                    {/* <a
+
+                                                    {/* Módulos não funcionais */}
+                    {/* <Link
                         href="financeiro.html"
                         className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105"
                     >
                         Gestão Financeira
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="relatorios.html"
                         className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105"
                     >
                         Relatórios
-                    </a> */}
-                    {/* <a
+                    </Link> */}
+                    {/* <Link
                         href="dashboard.html"
                         className="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105"
                     >
                         Dashboard
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="pedidos.html"
                         classNames="block px-6 py-3 text-lg text-white bg-gray-700 rounded-lg my-2 w-11/12 mx-auto text-center shadow-md transition transform hover:bg-gray-600 hover:scale-105"
                     >
                         Pedidos Processados
-                    </a> */}
+                    </Link> */}
                 </nav>
             </div>
 

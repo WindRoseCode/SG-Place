@@ -1,10 +1,10 @@
 import './login.css'
 import Header from './Header/Header.jsx';
 
-export default function Login (){
+export default function Login() {
   return (
     <>
-      <Header/>
+      <Header />
       <div className="login-container">
         <div className="login-box">
           <h1>Login:</h1>

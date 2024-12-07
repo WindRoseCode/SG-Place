@@ -1,10 +1,10 @@
-import Header from ".././componentes/Modulos/Modulos";
+import Index from ".././componentes/Modulos/Modulos";
 
 
 export default function Home() {
   return (
     <>
-      <Header/>
+      <Index/>
       
     </>
   );

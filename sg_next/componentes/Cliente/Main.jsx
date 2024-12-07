@@ -5,7 +5,7 @@ const ClientesTabs = () => {
   const [activeTab, setActiveTab] = useState("cadastro");
 
   return (
-    <div className="container mx-auto ml-64 p-6">
+    <div className="container bg-gray-100 mx-auto ml-64 p-6">
       <h2 className="text-center text-2xl font-bold mb-6">Cadastro de Clientes</h2>
 
       {/* Abas */}
@@ -32,17 +32,7 @@ const ClientesTabs = () => {
             Consulta
           </button>
 
-          {/* Futura Função de crediario */}
-          {/* <button
-            className={`py-2 px-4 ${
-              activeTab === "crediario"
-                ? "border-b-2 border-blue-500 text-blue-500"
-                : "text-gray-600 hover:text-blue-500"
-            }`}
-            onClick={() => setActiveTab("crediario")}
-          >
-            Crediário/Cobrança
-          </button> */}
+         
         </nav>
       </div>
 
@@ -68,9 +58,9 @@ const Cadastro = () => {
     estado: '',
   });
 
-  const togglePessoa = (tipo) => setTipoPessoa(tipo);
+  const mudaPessoa = (tipo) => setTipoPessoa(tipo);
 
-  const handleChange = (e) => {
+  const mudaIdentificador = (e) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -78,13 +68,13 @@ const Cadastro = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const mudaSubmit  = (e) => {
     e.preventDefault();
     console.log(formData);
   };
 
   return (
-    <form className="space-y-4" onSubmit={handleSubmit}>
+    <form className="space-y-4" onSubmit={mudaSubmit}>
       {/* Tipo de Pessoa */}
       <div>
         <label className="text-lg font-bold mb-4">
@@ -97,7 +87,7 @@ const Cadastro = () => {
               name="tipoPessoa"
               value="fisica"
               checked={tipoPessoa === "fisica"}
-              onChange={() => togglePessoa("fisica")}
+              onChange={() => mudaPessoa("fisica")}
               className="form-radio"
             />
             <span>Pessoa Física</span>
@@ -107,7 +97,7 @@ const Cadastro = () => {
               type="radio"
               name="tipoPessoa"
               value="juridica"
-              onChange={() => togglePessoa("juridica")}
+              onChange={() => mudaPessoa("juridica")}
               className="form-radio"
             />
             <span>Pessoa Jurídica</span>
@@ -192,7 +182,7 @@ const Cadastro = () => {
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               placeholder="Rua, Av, etc."
               value={formData.logradouro}
-              onChange={handleChange}
+              onChange={mudaIdentificador}
               required
             />
           </div>
@@ -203,7 +193,7 @@ const Cadastro = () => {
               id="numero"
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               value={formData.numero}
-              onChange={handleChange}
+              onChange={mudaIdentificador}
               required
             />
           </div>
@@ -214,7 +204,7 @@ const Cadastro = () => {
               id="bairro"
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               value={formData.bairro}
-              onChange={handleChange}
+              onChange={mudaIdentificador}
               required
             />
           </div>
@@ -229,7 +219,7 @@ const Cadastro = () => {
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               placeholder="Apto, Bloco, Casa, etc."
               value={formData.complemento}
-              onChange={handleChange}
+              onChange={mudaIdentificador}
             />
           </div>
           <div>
@@ -239,7 +229,7 @@ const Cadastro = () => {
               id="cidade"
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               value={formData.cidade}
-              onChange={handleChange}
+              onChange={mudaIdentificador}
               required
             />
           </div>
@@ -250,7 +240,7 @@ const Cadastro = () => {
               id="estado"
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               value={formData.estado}
-              onChange={handleChange}
+              onChange={mudaIdentificador}
               required
             />
           </div>
@@ -286,12 +276,26 @@ const Consulta = () => (
   </div>
 );
 
+
+
+
+ {/* Futura Função de crediario */}
+          {/* <button
+            className={`py-2 px-4 ${
+              activeTab === "crediario"
+                ? "border-b-2 border-blue-500 text-blue-500"
+                : "text-gray-600 hover:text-blue-500"
+            }`}
+            onClick={() => setActiveTab("crediario")}
+          >
+            Crediário/Cobrança
+          </button> */}
 // Componente de Crediário/Cobrança
-const Crediario = () => (
-  <div>
-    <h3 className="text-lg font-bold mb-4">Crediário/Cobrança</h3>
-    <p>Gerencie cobranças e crediários aqui.</p>
-  </div>
-);
+// const Crediario = () => (
+//   <div>
+//     <h3 className="text-lg font-bold mb-4">Crediário/Cobrança</h3>
+//     <p>Gerencie cobranças e crediários aqui.</p>
+//   </div>
+// );
 
 export default ClientesTabs;
