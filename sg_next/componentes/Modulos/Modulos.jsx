@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-const Home = () => {
+export default function Home() {
   return (
+    
     <div className="min-h-screen bg-white-100">
       <div className="container mx-auto mt-10 px-4">
         <h1 className="text-center text-3xl font-bold mb-5">Bem-vindo ao Sistema de Gestão WEB ERP</h1>
@@ -103,5 +104,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

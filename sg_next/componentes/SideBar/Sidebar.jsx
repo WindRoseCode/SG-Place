@@ -7,7 +7,7 @@ export default function SideBar() {
             <div className="fixed top-0 left-0 h-full w-64 bg-gray-800 flex flex-col items-center pt-6">
                 <Link 
                     className="text-lg font-semibold text-white mb-6" 
-                    href={"/"}>
+                    href={"/home"}>
                     Gestão de Sistema
                 </Link>
 

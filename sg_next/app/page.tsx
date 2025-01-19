@@ -1,11 +1,9 @@
-import Index from ".././componentes/Modulos/Modulos";
-
+import Login from "@/componentes/Login/Login";
 
 export default function Home() {
   return (
     <>
-      <Index/>
-      
+      <Login/>
     </>
   );
 }
