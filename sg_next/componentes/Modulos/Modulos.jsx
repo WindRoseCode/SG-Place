@@ -2,7 +2,6 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    
     <div className="min-h-screen bg-white-100">
       <div className="container mx-auto mt-10 px-4">
         <h1 className="text-center text-3xl font-bold mb-5">Bem-vindo ao Sistema de Gestão WEB ERP</h1>
@@ -13,7 +12,6 @@ export default function Home() {
             <div className="card-body p-6">
               <h5 className="text-xl font-semibold mb-4"> Gestão Vendas e Pedidos</h5>
               <p className="text-gray-600 mb-4">Gerencie e acompanhe as vendas e pedidos dos clientes.</p>
-              {/* (Link legacyBehavior para conseguir usar o "a" como botão sem quebrar) */}
               <Link legacyBehavior href="/pedidos">
                 <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
               </Link>
@@ -39,65 +37,14 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
 
-          <div className="card-summary text-center bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="card-body p-6">
-              <h5 className="text-xl font-semibold mb-4">Pedidos Processados</h5>
-              <p className="text-gray-600 mb-4">Visualize e gerencie os pedidos processados.</p>
-              <Link legacyBehavior href="/">
-                <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
-              </Link>
-            </div>
-          </div>
-
-          <div className="card-summary text-center bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="card-body p-6">
-              <h5 className="text-xl font-semibold mb-4">Financeiro</h5>
-              <p className="text-gray-600 mb-4">Gestão financeira completa do sistema.</p>
-              <Link legacyBehavior href="/">
-                <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
-              </Link>
-            </div>
-          </div>
-
-          <div className="card-summary text-center bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="card-body p-6">
-              <h5 className="text-xl font-semibold mb-4">Relatórios</h5>
-              <p className="text-gray-600 mb-4">Visualize relatórios detalhados do sistema.</p>
-              <Link legacyBehavior href="/">
-                <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
-              </Link>
-            </div>
-          </div>
-
-          <div className="card-summary text-center bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="card-body p-6">
-              <h5 className="text-xl font-semibold mb-4">Dashboard</h5>
-              <p className="text-gray-600 mb-4">Resumo e métricas importantes.</p>
-              <Link legacyBehavior href="/">
-                <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
-              </Link>
-            </div>
-          </div>
-
-          <div className="card-summary text-center bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="card-body p-6">
-              <h5 className="text-xl font-semibold mb-4">CRM WhatsApp</h5>
-              <p className="text-gray-600 mb-4">Integração com o WhatsApp para CRM.</p>
-              <Link legacyBehavior href="">
-                <a target="_blank" className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
-              </Link>
-            </div>
-          </div>
-
-          <div className="card-summary text-center bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="card-body p-6">
-              <h5 className="text-xl font-semibold mb-4">Logout</h5>
-              <p className="text-gray-600 mb-4">Sair do sistema.</p>
-              <Link legacyBehavior href="/">
-                <a className="btn bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Sair</a>
-              </Link>
-            </div>
+        {/* Botão de sair centralizado */}
+        <div className="relative">
+          <div className="fixed bottom-4 right-8 p-4">
+            <Link legacyBehavior href="/">
+              <a className="btn bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Sair</a>
+            </Link>
           </div>
         </div>
       </div>
