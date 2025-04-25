@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import LogoutButton from "../Login/LogoutButton";
 
 export default function Home() {
   return (
@@ -42,9 +45,7 @@ export default function Home() {
         {/* Botão de sair centralizado */}
         <div className="relative">
           <div className="fixed bottom-4 right-8 p-4">
-            <Link legacyBehavior href="/">
-              <a className="btn bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Sair</a>
-            </Link>
+              <LogoutButton/>
           </div>
         </div>
       </div>

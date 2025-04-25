@@ -2,17 +2,27 @@
 
 import Link from "next/link";
 import React from "react";
+import {signIn} from "next-auth/react"
 
 
 export default function Loginform(){
+  async function login(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
 
-    async function login(e: React.FormEvent<HTMLFormElement>){
-      e.preventDefault()
-      const formData = new FormData(e.currentTarget);
-      console.log(formData.get("user"));
-      console.log(formData.get("senha"));
-
+    const data = {
+      user: formData.get("user"),
+      senha: formData.get("senha"),
     }
+    
+    signIn("credentials",{
+      ...data,
+      callbackUrl: "/home"
+    });
+
+  }
+
+
 
     return(
         <form onSubmit={login} id="loginForm">
