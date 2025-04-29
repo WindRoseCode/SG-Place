@@ -5,7 +5,7 @@ const ClientesTabs = () => {
   const [activeTab, setActiveTab] = useState("cadastro");
 
   return (
-    <div className="container bg-gray-100 mx-auto ml-64 p-6">
+    <div className="container bg-white-100 mx-auto ml-64 p-6">
       <h2 className="text-center text-2xl font-bold mb-6">Cadastro de Clientes</h2>
 
       {/* Abas */}
@@ -107,40 +107,40 @@ const Cadastro = () => {
 
       {/* Campos para Pessoa Física */}
       {tipoPessoa === "fisica" && (
-        <div>
-          <div className="flex flex-col space-y-2">
-            <label className="text-sm font-medium text-gray-700">CPF:</label>
-            <input
-              type="text"
-              placeholder="000.000.000-00"
-              className="border border-gray-300 rounded-lg px-4 py-2"
-            />
-          </div>
-          <div className="flex flex-col space-y-2">
-            <label className="text-sm font-medium text-gray-700">
-              Nome Completo:
-            </label>
-            <input
-              type="text"
-              placeholder="Nome completo do cliente"
-              className="border border-gray-300 rounded-lg px-4 py-2"
-            />
-          </div>
-          <div className="flex flex-col space-y-2">
-            <label className="text-sm font-medium text-gray-700">
-              Data de Nascimento:
-            </label>
-            <input
-              type="date"
-              className="border border-gray-300 rounded-lg px-4 py-2"
-            />
-          </div>
+        <div className="w-full max-w-md">
+        <div className="flex flex-col space-y-2">
+          <label className="text-sm font-medium text-gray-700">CPF:</label>
+          <input
+            type="text"
+            placeholder="000.000.000-00"
+            className="border border-gray-300 rounded-lg px-4 py-2 w-full"
+          />
         </div>
+        <div className="flex flex-col space-y-2">
+          <label className="text-sm font-medium text-gray-700">
+            Nome Completo:
+          </label>
+          <input
+            type="text"
+            placeholder="Nome completo do cliente"
+            className="border border-gray-300 rounded-lg px-4 py-2 w-full"
+          />
+        </div>
+        <div className="flex flex-col space-y-2">
+          <label className="text-sm font-medium text-gray-700">
+            Data de Nascimento:
+          </label>
+          <input
+            type="date"
+            className="text-sm font-medium text-gray-700 border border-gray-300 rounded-lg px-4 py-2 w-full"
+          />
+        </div>
+      </div>
       )}
 
       {/* Campos para Pessoa Jurídica */}
       {tipoPessoa === "juridica" && (
-        <div>
+        <div className="w-full max-w-md">
           <div className="flex flex-col space-y-2">
             <label className="text-sm font-medium text-gray-700">CNPJ:</label>
             <input
@@ -260,7 +260,7 @@ const Cadastro = () => {
 
 // Componente de Consulta
 const Consulta = () => (
-  <div>
+  <div className="w-full max-w-md">
     <h3 className="text-lg font-bold mb-4">Consulta de Clientes</h3>
     <div className="flex flex-col space-y-2">
       <label className="text-sm font-medium text-gray-700">CPF/CNPJ:</label>

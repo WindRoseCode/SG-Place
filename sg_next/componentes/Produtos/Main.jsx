@@ -8,7 +8,7 @@ export default function Index() {
     <>
       <div className="ml-64 p-6">
 
-        <div className="p-6 bg-gray-100 min-h-screen">
+        <div className="p-6 bg-white-100 min-h-screen">
           <h2 className="text-2xl font-semibold mb-6">Gestão de Produtos</h2>
           {/* Tabs */}
           <div>

@@ -1,7 +1,7 @@
 export default function Main() {
   return (
     <main>
-      <div className="ml-64 bg-gray-100 p-6">
+      <div className="ml-64 bg-white-100 p-6">
         <div className="container mx-auto mt-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Gestão de Vendas e Pedidos</h2>
 
