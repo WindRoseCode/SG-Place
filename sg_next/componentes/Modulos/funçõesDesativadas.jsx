@@ -50,3 +50,24 @@
               </Link>
             </div>
           </div> */}
+
+
+           {/* Futura Função de crediario */}
+          {/* <button
+            className={`py-2 px-4 ${
+              activeTab === "crediario"
+                ? "border-b-2 border-blue-500 text-blue-500"
+                : "text-gray-600 hover:text-blue-500"
+            }`}
+            onClick={() => setActiveTab("crediario")}
+          >
+            Crediário/Cobrança
+          </button> */}
+{/* // Componente de Crediário/Cobrança
+// const Crediario = () => (
+//   <div>
+//     <h3 className="text-lg font-bold mb-4">Crediário/Cobrança</h3>
+//     <p>Gerencie cobranças e crediários aqui.</p>
+//   </div>
+// ); */}
+

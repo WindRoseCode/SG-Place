@@ -1,11 +1,11 @@
 import express from "express";
 import cors from "cors";
-import userRoutes from "./routes/users.js"
+import clientRoutes from "./routes/client.js"
 
 const app = express();
 
-app.use(express.jason());
+app.use(express.json());
 app.use(cors());
 
-app.use("/", userRoutes)
-app.listen(8800);4
+app.use("/", clientRoutes)
+app.listen(8800);

@@ -15,8 +15,8 @@ export default function Home() {
             <div className="card-body p-6">
               <h5 className="text-xl font-semibold mb-4"> Gestão Vendas e Pedidos</h5>
               <p className="text-gray-600 mb-4">Gerencie e acompanhe as vendas e pedidos dos clientes.</p>
-              <Link legacyBehavior href="/pedidos">
-                <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
+              <Link className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600" href="/pedidos">
+                Acessar
               </Link>
             </div>
           </div>
@@ -25,8 +25,8 @@ export default function Home() {
             <div className="card-body p-6">
               <h5 className="text-xl font-semibold mb-4"> Gestão Produtos</h5>
               <p className="text-gray-600 mb-4">Consulte e gerencie o estoque de produtos.</p>
-              <Link legacyBehavior href="/produtos">
-                <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
+              <Link className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600" href="/produtos">
+                Acessar
               </Link>
             </div>
           </div>
@@ -35,8 +35,8 @@ export default function Home() {
             <div className="card-body p-6">
               <h5 className="text-xl font-semibold mb-4"> Gestão Clientes</h5>
               <p className="text-gray-600 mb-4">Cadastro e consulta de clientes.</p>
-              <Link legacyBehavior href="/clientes">
-                <a className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Acessar</a>
+              <Link className="btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600" href="/clientes">
+                Acessar
               </Link>
             </div>
           </div>
