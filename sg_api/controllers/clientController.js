@@ -12,13 +12,13 @@ export const getCliente = (_, res) => {
 
 export const addCliente = (req, res) => {
     const q = 
-    "INSERT INTO cliente(`nome`,`data_nascimento`,`email`,`numero`,`cpfcnpj`,`rzsocial`) VALUES(?)";
+    "INSERT INTO cliente(`nome`,`data_nascimento`,`email`,`fone`,`cpfcnpj`,`rzsocial`) VALUES(?)";
 
     const values = [
         req.body.nome,
         req.body.data_nascimento,
         req.body.email,
-        req.body.numero,
+        req.body.fone,
         req.body.cpfcnpj,
         req.body.rzsocial,
     ];
@@ -32,13 +32,13 @@ export const addCliente = (req, res) => {
 
 export const updateCliente = (req, res) =>{
     const q = 
-    "UPDATE cliente SET `nome` = ? ,`data_nascimento` = ? ,`email` = ? ,`numero` = ? ,`cpfcnpj` = ? ,`rzsocial` = ? WHERE `id` = ? ";
+    "UPDATE cliente SET `nome` = ? ,`data_nascimento` = ? ,`email` = ? ,`fone` = ? ,`cpfcnpj` = ? ,`rzsocial` = ? WHERE `id` = ? ";
 
     const values = [
         req.body.nome,
         req.body.data_nascimento,
         req.body.email,
-        req.body.numero,
+        req.body.fone,
         req.body.cpfcnpj,
         req.body.rzsocial,
     ];
